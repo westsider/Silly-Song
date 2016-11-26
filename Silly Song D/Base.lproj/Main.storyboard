@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="KK8-Xz-XzP">
             <objects>
-                <viewController id="MlU-jz-vMD" customClass="ViewController" customModule="Silly_Song" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MlU-jz-vMD" customClass="ViewController" customModule="Silly_Song_D" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QD3-kO-zKG"/>
                         <viewControllerLayoutGuide type="bottom" id="0D8-3Q-BJZ"/>
@@ -22,47 +22,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Silly Song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TlK-LW-ZS8">
-                                <rect key="frame" x="68" y="28" width="241" height="75"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Silly Song !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TlK-LW-ZS8">
+                                <rect key="frame" x="67" y="90" width="241" height="75"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="241" id="NS4-3E-JMC"/>
-                                    <constraint firstAttribute="height" constant="75" id="tRg-8K-enY"/>
+                                    <constraint firstAttribute="height" constant="75" id="OTC-II-C7L"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xmJ-v8-FFn">
+                                <rect key="frame" x="68" y="302" width="239" height="197"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kPF-hS-FCe">
-                                <rect key="frame" x="80" y="217" width="216" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                <rect key="frame" x="68" y="219" width="240" height="30"/>
+                                <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                 <connections>
                                     <action selector="displayLyrics:" destination="MlU-jz-vMD" eventType="editingDidEnd" id="Kg9-9d-4Br"/>
                                     <action selector="reset:" destination="MlU-jz-vMD" eventType="editingDidBegin" id="5lB-1V-b2Q"/>
                                 </connections>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xmJ-v8-FFn">
-                                <rect key="frame" x="68" y="302" width="240" height="197"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="197" id="YgQ-4Y-qad"/>
-                                    <constraint firstAttribute="width" constant="240" id="fmZ-xT-y7h"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="xmJ-v8-FFn" firstAttribute="top" secondItem="kPF-hS-FCe" secondAttribute="bottom" constant="55" id="022-0T-Oxu"/>
-                            <constraint firstItem="kPF-hS-FCe" firstAttribute="leading" secondItem="64G-wI-ndU" secondAttribute="leadingMargin" constant="64" id="BCB-gt-NPa"/>
-                            <constraint firstItem="kPF-hS-FCe" firstAttribute="top" secondItem="TlK-LW-ZS8" secondAttribute="bottom" constant="114" id="P5D-vb-tWq"/>
-                            <constraint firstItem="xmJ-v8-FFn" firstAttribute="centerX" secondItem="kPF-hS-FCe" secondAttribute="centerX" id="XM0-g6-NCZ"/>
-                            <constraint firstItem="TlK-LW-ZS8" firstAttribute="centerX" secondItem="64G-wI-ndU" secondAttribute="centerX" id="Zlb-NV-teX"/>
-                            <constraint firstItem="TlK-LW-ZS8" firstAttribute="top" secondItem="QD3-kO-zKG" secondAttribute="bottom" constant="8" id="eJm-wE-acN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kPF-hS-FCe" secondAttribute="trailing" constant="63" id="qzA-Pu-BxD"/>
-                            <constraint firstItem="kPF-hS-FCe" firstAttribute="centerX" secondItem="TlK-LW-ZS8" secondAttribute="centerX" id="yXl-oc-rSk"/>
+                            <constraint firstItem="xmJ-v8-FFn" firstAttribute="top" secondItem="kPF-hS-FCe" secondAttribute="bottom" constant="53" id="5Vl-mg-yhg"/>
+                            <constraint firstItem="TlK-LW-ZS8" firstAttribute="top" secondItem="QD3-kO-zKG" secondAttribute="bottom" constant="70" id="94B-E0-VRg"/>
+                            <constraint firstItem="kPF-hS-FCe" firstAttribute="top" secondItem="TlK-LW-ZS8" secondAttribute="bottom" constant="54" id="99r-eu-glX"/>
+                            <constraint firstItem="0D8-3Q-BJZ" firstAttribute="top" secondItem="xmJ-v8-FFn" secondAttribute="bottom" constant="168" id="AYW-Vg-FTD"/>
+                            <constraint firstItem="TlK-LW-ZS8" firstAttribute="centerX" secondItem="kPF-hS-FCe" secondAttribute="centerX" id="EAY-8s-vbW"/>
+                            <constraint firstItem="kPF-hS-FCe" firstAttribute="centerX" secondItem="xmJ-v8-FFn" secondAttribute="centerX" id="XKK-Ey-f9Y"/>
+                            <constraint firstItem="kPF-hS-FCe" firstAttribute="leading" secondItem="xmJ-v8-FFn" secondAttribute="leading" id="jNF-oO-pxa"/>
+                            <constraint firstItem="TlK-LW-ZS8" firstAttribute="trailing" secondItem="kPF-hS-FCe" secondAttribute="trailing" id="jrE-cW-rTH"/>
+                            <constraint firstItem="TlK-LW-ZS8" firstAttribute="centerX" secondItem="64G-wI-ndU" secondAttribute="centerX" id="qxh-pd-YJY"/>
+                            <constraint firstItem="TlK-LW-ZS8" firstAttribute="leading" secondItem="64G-wI-ndU" secondAttribute="leadingMargin" constant="51" id="yb7-uR-2Re"/>
                         </constraints>
                     </view>
                     <connections>
@@ -72,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eeu-E0-G5R" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.23188405797103" y="138.58695652173915"/>
+            <point key="canvasLocation" x="135.19999999999999" y="138.0809595202399"/>
         </scene>
     </scenes>
 </document>
