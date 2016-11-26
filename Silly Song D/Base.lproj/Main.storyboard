@@ -1,26 +1,78 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MlU-jz-vMD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="KK8-Xz-XzP">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MlU-jz-vMD" customClass="ViewController" customModule="Silly_Song" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="QD3-kO-zKG"/>
+                        <viewControllerLayoutGuide type="bottom" id="0D8-3Q-BJZ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="64G-wI-ndU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Silly Song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TlK-LW-ZS8">
+                                <rect key="frame" x="68" y="28" width="241" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="241" id="NS4-3E-JMC"/>
+                                    <constraint firstAttribute="height" constant="75" id="tRg-8K-enY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kPF-hS-FCe">
+                                <rect key="frame" x="80" y="217" width="216" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="displayLyrics:" destination="MlU-jz-vMD" eventType="editingDidEnd" id="Kg9-9d-4Br"/>
+                                    <action selector="reset:" destination="MlU-jz-vMD" eventType="editingDidBegin" id="5lB-1V-b2Q"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xmJ-v8-FFn">
+                                <rect key="frame" x="68" y="302" width="240" height="197"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="197" id="YgQ-4Y-qad"/>
+                                    <constraint firstAttribute="width" constant="240" id="fmZ-xT-y7h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xmJ-v8-FFn" firstAttribute="top" secondItem="kPF-hS-FCe" secondAttribute="bottom" constant="55" id="022-0T-Oxu"/>
+                            <constraint firstItem="kPF-hS-FCe" firstAttribute="leading" secondItem="64G-wI-ndU" secondAttribute="leadingMargin" constant="64" id="BCB-gt-NPa"/>
+                            <constraint firstItem="kPF-hS-FCe" firstAttribute="top" secondItem="TlK-LW-ZS8" secondAttribute="bottom" constant="114" id="P5D-vb-tWq"/>
+                            <constraint firstItem="xmJ-v8-FFn" firstAttribute="centerX" secondItem="kPF-hS-FCe" secondAttribute="centerX" id="XM0-g6-NCZ"/>
+                            <constraint firstItem="TlK-LW-ZS8" firstAttribute="centerX" secondItem="64G-wI-ndU" secondAttribute="centerX" id="Zlb-NV-teX"/>
+                            <constraint firstItem="TlK-LW-ZS8" firstAttribute="top" secondItem="QD3-kO-zKG" secondAttribute="bottom" constant="8" id="eJm-wE-acN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kPF-hS-FCe" secondAttribute="trailing" constant="63" id="qzA-Pu-BxD"/>
+                            <constraint firstItem="kPF-hS-FCe" firstAttribute="centerX" secondItem="TlK-LW-ZS8" secondAttribute="centerX" id="yXl-oc-rSk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lyricsView" destination="xmJ-v8-FFn" id="6uJ-B3-5XS"/>
+                        <outlet property="nameField" destination="kPF-hS-FCe" id="UpX-99-NQV"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eeu-E0-G5R" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="138.58695652173915"/>
         </scene>
     </scenes>
 </document>
