@@ -11,7 +11,6 @@ import Foundation
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var lyricsView: UITextView!
     
@@ -22,18 +21,16 @@ class ViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func reset(_ sender: AnyObject) {
-        nameField.text = ""
         lyricsView.text = ""
+        nameField.text = ""
     }
     
     @IBAction func displayLyrics(_ sender: AnyObject) {
-        lyricsView.text = lyricsForName(lyricsTemplate: bananaFanaTemplate, fullName: nameField.text!)
+        lyricsView.text = lyricsForName(lyricsTemplate: bananaBanaTemplate, fullName: nameField.text!)
     }
-    
 }
 
 func shortNamefromName(name: String) -> String {
@@ -46,7 +43,7 @@ func shortNamefromName(name: String) -> String {
     }
 }
 
-let bananaFanaTemplate = [
+let bananaBanaTemplate = [
     "<FULL_NAME>, <FULL_NAME>, Bo B<SHORT_NAME>",
     "Banana Fana Fo F<SHORT_NAME>",
     "Me My Mo M<SHORT_NAME>",
@@ -54,12 +51,10 @@ let bananaFanaTemplate = [
 
 func lyricsForName(lyricsTemplate: String, fullName: String) -> String {
     let shortName = shortNamefromName(name: fullName)
-    
-    let songWithName = lyricsTemplate
+    let songAndName = lyricsTemplate
         .replacingOccurrences(of: "<FULL_NAME>", with: fullName.capitalized)
         .replacingOccurrences(of: "<SHORT_NAME>", with: shortName)
-    
-    return songWithName
+    return songAndName
 }
 
 // MARK: - UITextFieldDelegate
@@ -69,5 +64,3 @@ extension ViewController: UITextFieldDelegate {
         return false
     }
 }
-
-
