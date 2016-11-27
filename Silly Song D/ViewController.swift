@@ -19,10 +19,6 @@ class ViewController: UIViewController {
         nameField.delegate = self
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     @IBAction func reset(_ sender: AnyObject) {
         lyricsView.text = ""
         nameField.text = ""
